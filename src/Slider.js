@@ -339,7 +339,7 @@ export default class Slider extends PureComponent {
     e: Object /* gestureState: Object */,
   ): boolean =>
     // Should we become active when the user presses down on the thumb?
-    return this.props.trackClickable ? true : this._thumbHitTest(e);
+    this.props.trackClickable ? true : this._thumbHitTest(e);
 
   _handleMoveShouldSetPanResponder(/* e: Object, gestureState: Object */): boolean {
     // Should we become active when the user moves a touch over the thumb?
